@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massot — U-Net</title>
+    <link rel="icon" type="image/png" href="https://nicolasmassot.fr/wp-content/uploads/2022/10/V2-logo-Nicolas-MASSOT.webp">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Notre CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css">
+    
+        <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Massot — U-Net">
+    <meta property="og:description" content="Résultats de segmentation avec U-Net pour l'occupation du sol.">
+    <meta property="og:image" content="https://nicolasmassot.fr/wp-content/uploads/2025/05/ocsol_massot.png">
+    <meta property="og:url" content="https://mercatorien.github.io/MEMOIRE_MASSOT/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Massot — U-Net">
+    <meta name="twitter:description" content="Résultats de segmentation avec U-Net pour l'occupation du sol.">
+    <meta name="twitter:image" content="https://nicolasmassot.fr/wp-content/uploads/2025/05/ocsol_massot.png">
+    
+    
+        
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/main/geodata/logo.jpg?raw=true" alt="Logo ICU Festival" class="header-logo">
+            <div class="header-titles">
+                <h1>Chaleur urbaine en séries temporelles et accessibilité des théâtres du Festival IN</h1>
+            </div>
+        </div>
+    </header>
+
+    <div id="map"></div>
+
+    <!-- Conteneur du graphique des températures -->
+    <div id="theatre-chart-container" style="position: fixed; right: 32px; bottom: 32px; z-index: 1200; background: rgba(255,255,255,0.96); border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.14); padding: 26px 34px 18px 34px; display: none; min-width: 380px; min-height: 320px; max-width: 520px;">
+        <canvas id="theatre-chart" width="420" height="310"></canvas>
+        <button id="close-chart-btn" style="position:absolute;top:10px;right:18px;background:none;border:none;font-size:1.5em;color:#888;cursor:pointer;">&times;</button>
+    </div>
+
+    <!-- Contrôles de la carte -->
+    <div id="controls">
+        <div class="control-panel">
+            <h3><i class="fas fa-layer-group"></i> Légende</h3>
+            <div class="layer-control">
+                <label class="toggle-container">
+                    <input type="checkbox" id="theatres-toggle" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Théâtres</span>
+                </label>
+            </div>
+            <div class="layer-control">
+                <label class="toggle-container">
+                    <input type="checkbox" id="directions-toggle">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Réseau reliant</span>
+                </label>
+            </div>
+            <div class="layer-control">
+                <label class="toggle-container">
+                    <input type="checkbox" id="isochrones-toggle">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Nombre de théâtres<br>accessibles en 15mn à pied</span>
+                </label>
+                <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/20b6400c92795cf895651e7a5ae54471f03a9a22/geodata/legende.png?raw=true"
+                     alt="Légende isochrones"
+                     style="display:block;max-width:180px;margin:10px auto 0 auto">
+            </div>
+            <div class="layer-control">
+                <label class="toggle-container">
+                    <input type="checkbox" id="matriceod-toggle">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Matrice origine-destination</span>
+                </label>
+            </div>
+            <div class="layer-control">
+                <label class="toggle-container">
+                    <input type="checkbox" id="communes-toggle" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Communes</span>
+                </label>
+            </div>
+            <div class="layer-control">
+                <label class="toggle-container basemap-toggle">
+                    <input type="checkbox" id="basemap-switch" checked style="display:none;">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label" id="basemap-label">Choix du fond de carte</span>
+                </label>
+            </div>
+            <div id="legend"></div>
+
+            <div class="credits">
+            
+
+                <span>Crédit : N. Massot, 2025</span>
+                <a href="https://nicolasmassot.fr" target="_blank" class="logo-credit">
+                    <img src="https://nicolasmassot.fr/wp-content/uploads/2022/10/V2-logo-Nicolas-MASSOT.webp" alt="Nicolas Massot">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Notre JS personnalisé -->
+    <script src="js/main.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <div id="legend" class="legend"></div>
+</body>
+</html>

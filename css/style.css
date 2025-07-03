@@ -1,0 +1,715 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #121212;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* En-tête */
+.main-header {
+    background: linear-gradient(135deg, #1b2228 0%, #2b3347de 100%);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.header-logo {
+    height: 75px;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    margin-right: 1.5rem;
+    margin-left: 0; /* Collé à gauche */
+    flex-shrink: 0;
+}
+
+.header-titles {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    padding: 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #c5c8da;
+    margin: 0.4rem 0 0 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+
+/* Carte */
+#map {
+    flex: 1;
+    width: 100%;
+    background-color: #2d2d2d;
+}
+
+/* Labels des communes (GeoJSON) */
+.commune-label {
+    color: #111;
+    font-size: 0.80rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff, 0 0 2px #fff;
+    pointer-events: none;
+    background: rgba(255,255,255,0.5);
+    border-radius: 2px;
+    padding: 1px 4px;
+    white-space: nowrap;
+}
+
+
+/* Panneau de contrôle */
+#controls {
+    position: absolute;
+    top: 160px; /* Position sous le header */
+    left: 8px;
+    z-index: 1000;
+    background: rgba(26, 32, 44, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 340px;
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 110px); /* Hauteur maximale moins l'espace du header */
+}
+
+/* Nouvelle disposition horizontale pour les trois boutons mémoire */
+.memoire-btn-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 12px 10px 12px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    align-items: stretch;
+}
+
+.memoire-btn-row .memoire-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    width: auto;
+    padding: 9px 0;
+    height: 60px;
+    background-color: #4398e0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s, box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(67, 152, 224, 0.08);
+}
+
+.memoire-btn-row .memoire-btn:hover,
+.memoire-btn-row .memoire-btn:focus {
+    opacity: 0.9;
+    box-shadow: 0 6px 18px -10px #4398e0a0;
+}
+
+
+.control-panel h3 {
+    margin: 0;
+    padding: 12px 15px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-panel h3 i {
+    color: #63b3ed;
+    width: 20px;
+    text-align: center;
+}
+
+/* Légende */
+.legend-separator {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 18px 0 0px 0;
+    opacity: 0.7;
+}
+
+/* Légende isochrones : carrés couleurs et alignement */
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+.legend-color {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border: 1.5px solid #444;
+    margin-right: 5px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #fff;
+}
+.legend-label {
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+#legend {
+    padding: 15px !important;
+    margin: 0 !important;
+    flex: 1 !important;
+    overflow-y: auto !important;
+    position: fixed !important;
+    bottom: 220px !important; /* Augmenté pour monter la légende */
+    left: 24px !important;
+    z-index: 1001 !important;
+}
+
+/* Info icon and popup for probability map switch */
+.info-icon {
+    display: inline-block;
+    color: #63b3ed;
+    margin-left: 8px;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+.info-icon:focus {
+    outline: none;
+}
+.info-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 250px; /* Ajuste selon la hauteur du panneau */
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: #222b3a;
+    color: #e2e8f0;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    padding: 24px 32px 18px 32px;
+    width: 500px;
+    font-size: 1.08em;
+    line-height: 1.6;
+    text-align: left;
+    transition: opacity 0.2s;
+    white-space: normal;
+    overflow: visible;
+}
+.info-icon:hover .info-popup,
+.info-icon:focus .info-popup {
+    display: block;
+}
+.info-popup img {
+    display: block;
+    margin: 10px auto 0 auto;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.legend-row {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+
+
+/* Hover dynamique sur boutons */
+.animated-btn:hover, .animated-btn:focus {
+  transform: scale(1.045) translateY(-2px);
+  box-shadow: 0 6px 18px -10px #4398e0a0;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+/* Hover dynamique sur info-icon */
+.info-icon:hover, .info-icon:focus {
+  color: #ffe066;
+  transform: rotate(-10deg) scale(1.18);
+  transition: transform 0.18s, color 0.18s;
+}
+
+/* Hover dynamique sur les items de légende */
+
+a.memoire-btn {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #4398e0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+    /* width, margin et padding sont gérés dans .memoire-btn-row .memoire-btn */
+}
+
+a.memoire-btn:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+a.memoire-btn:not(:last-of-type) {
+    margin-bottom: 8px;
+}
+
+
+.memoire-btn:hover {
+    opacity: 0.9;
+}
+
+/* Modale */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #1a202c;
+    padding: 25px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #a0aec0;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #ffffff;
+}
+
+.modal-content p {
+    margin: 0;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.legend-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    width: 100%;
+    justify-content: space-between;
+}
+.legend-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+/* (Ancien .legend-container n'est plus utilisé pour la légende principale) */
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px; /* Réduit de 10px à 5px */
+    padding: 2px 0; /* Réduit de 4px à 2px */
+}
+
+.legend-color {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.legend-label {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+/* Contrôles de couche */
+.layer-control {
+    padding: 12px 15px;
+    background: rgba(26, 32, 44, 0.95); /* même couleur que le panneau */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+.layer-control:last-of-type {
+    margin-bottom: 60px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.toggle-container input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.toggle-slider {
+    width: 36px;
+    height: 20px;
+    background-color: #4a5568;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.3s;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.toggle-slider:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+input:checked + .toggle-slider {
+    background-color: #4299e1;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(16px);
+}
+
+.toggle-label {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.opacity-control {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.opacity-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+.opacity-label {
+    white-space: nowrap;
+    color: #e2e8f0;
+    font-size: 0.95em;
+    font-weight: 400;
+    margin-right: 8px;
+    flex: 0 0 auto;
+}
+.opacity-row input[type="range"] {
+    flex: 1 1 auto;
+    margin: 0;
+    min-width: 80px;
+}
+
+.opacity-control label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #a0aec0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #4a5568;
+    outline: none;
+    margin: 10px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #4299e1;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+}
+
+/* Contrôles de couche */
+.layer-control {
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Crédits - déplacés en bas du panneau */
+.credits {
+    padding: 10px 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #a0aec0;
+    margin-top: auto; /* Pousse les crédits vers le bas */
+}
+
+.credits a {
+    color: #63b3ed;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.credits a:hover {
+    color: #90cdf4;
+}
+
+.logo-credit img {
+    height: 24px;
+    width: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 8px;
+    transition: transform 0.2s;
+}
+
+.logo-credit:hover img {
+    transform: scale(1.1);
+}
+
+.compare-control {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+.compare-button {
+    width: 100%;
+    padding: 8px;
+    background-color: #4a6da7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.compare-button:hover {
+    background-color: #3a5a8f;
+}
+
+.compare-button.active {
+    background-color: #d9534f;
+}
+
+.compare-button.active:hover {
+    background-color: #c9302c;
+}
+
+.opacity-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* Style pour les contrôles de Leaflet */
+.leaflet-control-attribution {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: #ccc !important;
+}
+
+.leaflet-control-attribution a {
+    color: #4dabf7 !important;
+}
+
+/* Styles pour le curseur de comparaison */
+.leaflet-container .leaflet-control-compare {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: none;
+    contain: layout style;
+    will-change: transform;
+}
+
+.leaflet-control-compare .compare-handle {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: ew-resize;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.leaflet-control-compare .compare-handle:active {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.leaflet-control-compare .compare-handle:before,
+.leaflet-control-compare .compare-handle:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    background: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    will-change: transform;
+}
+
+.leaflet-control-compare .compare-handle:before {
+    left: 10px;
+}
+
+.leaflet-control-compare .compare-handle:after {
+    right: 10px;
+}
+
+.leaflet-control-compare .compare-divider {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    left: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    will-change: transform;
+}
+
+/* Styles pour les panneaux de comparaison */
+.leaflet-pane.left-pane {
+    z-index: 1;
+    will-change: clip;
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.leaflet-pane.right-pane {
+    z-index: 2;
+    will-change: clip;
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Optimisation des performances pour les tuiles */
+.leaflet-tile {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
