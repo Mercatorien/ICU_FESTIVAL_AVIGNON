@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massot — U-Net</title>
+    <link rel="icon" type="image/png" href="https://nicolasmassot.fr/wp-content/uploads/2022/10/V2-logo-Nicolas-MASSOT.webp">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Notre CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css">
+    
+        <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Massot — U-Net">
+    <meta property="og:description" content="Résultats de segmentation avec U-Net pour l'occupation du sol.">
+    <meta property="og:image" content="https://nicolasmassot.fr/wp-content/uploads/2025/05/ocsol_massot.png">
+    <meta property="og:url" content="https://mercatorien.github.io/MEMOIRE_MASSOT/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Massot — U-Net">
+    <meta name="twitter:description" content="Résultats de segmentation avec U-Net pour l'occupation du sol.">
+    <meta name="twitter:image" content="https://nicolasmassot.fr/wp-content/uploads/2025/05/ocsol_massot.png">
+    
+    
+        
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="https://nicolasmassot.fr/wp-content/uploads/2025/05/3logo-scaled.jpg" alt="Logo" class="header-logo">
+            <div class="header-titles">
+                <h1>Apport de l'apprentissage profond à la cartographie de l'occupation du sol :</h1>
+                <p class="subtitle"><strong>Cas d'usage sur le Grand Avignon</strong></p>
+            </div>
+        </div>
+    </header>
+
+    <div id="map"></div>
+
+    <!-- Contrôles de la carte -->
+    <div id="controls">
+        <div class="control-panel">
+            <h3><i class="fas fa-layer-group"></i> Légende</h3>
+            <div class="layer-control">
+                <label class="toggle-container">
+                    <input type="checkbox" id="raster-toggle" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Afficher l'occupation du sol</span>
+                </label>
+                <div class="opacity-control">
+                    <div class="opacity-row">
+                        <label for="opacity" class="opacity-label">Opacité : <span id="opacity-value">60</span>%</label>
+                        <input type="range" id="opacity" min="0" max="100" value="60">
+                    </div>
+                </div>
+            </div>
+            <div id="legend"></div>
+            <div class="memoire-btn-row">
+                <a href="https://github.com/Mercatorien/MEMOIRE_MASSOT/raw/49f180f171e7e8ff7d299648aa6b7443b56abf5d/MEMOIRE_MASSOT.pdf" id="memoire-btn" class="memoire-btn" target="_blank" rel="noopener noreferrer">Mon<br>mémoire</a>
+                <a href="https://github.com/Mercatorien/MEMOIRE_MASSOT/" class="memoire-btn" target="_blank" rel="noopener noreferrer">Dépôt<br>GitHub</a>
+                <a href="https://zenodo.org/records/15591285" class="memoire-btn" target="_blank" rel="noopener noreferrer">Dépôt<br>Zenodo</a>
+            </div>
+            <div class="credits">
+            
+
+                <span>Crédit : N. Massot, 2025</span>
+                <a href="https://nicolasmassot.fr" target="_blank" class="logo-credit">
+                    <img src="https://nicolasmassot.fr/wp-content/uploads/2022/10/V2-logo-Nicolas-MASSOT.webp" alt="Nicolas Massot">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Notre JS personnalisé -->
+    <script src="js/main.js"></script>
+</body>
+</html>
