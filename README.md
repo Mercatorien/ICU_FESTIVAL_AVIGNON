@@ -93,7 +93,7 @@ J'utilise l'algorithme GRASS r.sunmask.datetime et le LiDAR pour calculer les om
 
 ---
 
-## 4. 🍃 NDVI
+## 3.2 🍃 NDVI
 
 Le **Normalized Difference Vegetation Index (NDVI)** a été utilisé pour identifier les zones végétalisées.
 
@@ -125,11 +125,12 @@ Le **Normalized Difference Vegetation Index (NDVI)** a été utilisé pour ident
 
 ---
 
-## 5. 🌡️ Température de surface
 
-### 5.1 Télédétection
+## 3.3 Thermographie de surface mesurée par télédétection
 
 Quels facteurs explicatifs à l'apparition d'îlot de chaleur urbain (ICU) ? <br>
+
+<div align="center">
 
 <table>
   <thead>
@@ -190,6 +191,7 @@ Quels facteurs explicatifs à l'apparition d'îlot de chaleur urbain (ICU) ? <br
     </tr>
   </tbody>
 </table>
+</div>
 
 <br> <br>
 
@@ -213,7 +215,7 @@ En calculant des thermographies de surface en série temporelle, j'obtiens pour 
 <img width="2000" height="477" alt="image" src="https://github.com/user-attachments/assets/30ce9e33-6e74-4a87-beab-0255eb0731fd" />
 
 
-### 5.2 Modélisation
+## 3.4 Température de surface modélisée
 
 En complément, une **modélisation thermique** a été réalisée à l’aide d’un modèle énergétique urbain.
 
@@ -257,13 +259,13 @@ Avantages :
 
 ---
 
-## 6. 🏠 Étude du Diagnostic de Performance Énergétique (DPE)
+## 4. 🏠 Étude du Diagnostic de Performance Énergétique (DPE)
 
 Une des hypothèses de recherche est que les théâtres les moins isolés ont un confort thermique réduit. Pour mesurer ça, nous étudions le lien statistique entre la classe de **diagnostic de performance énergétique** et l'année de construction des bâtiments. Si le lien est avéré, nous pouvons extrapôler, et prédire par modélisation statistique la classe DPE pour les théâtres qui ne sont pas encore diagnostiqués.
 
 <br>
 <div align="center">
-  <img src="https://mercatorien.github.io/DPE_FESTIVAL_AVIGNON/DPE_files/figure-html/unnamed-chunk-6-1.png?raw=true" width="70%"/>
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/0b744f092968c6516a3da4b0ab7c5a36e2354300/03.5_dpe/boxplot_dpe.png?raw=true" width="70%"/>
 </div> <br>
 
 
@@ -277,10 +279,22 @@ Une des hypothèses de recherche est que les théâtres les moins isolés ont un
 
 ---
 
-## 7. 🏛️ Les lieux d’hier les plus susceptibles d’être réutilisables
+## 5. 🏛️ Les lieux d’hier les plus susceptibles d’être réutilisables
 
 À partir de la base de donnée créée par Kevin Bernard qui recense tous les théâtres du IN depuis 1947 jusqu'à nos jours, je calcule l'évolution de la température sur les 162 théâtres les plus proches d'Avignon.
-[![Ouvrir le PDF](https://img.shields.io/badge/Ouvrir%20le%20PDF-Graphique%20Théâtres%202025-blue?style=for-the-badge)](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/cf37d58a9eff93de1658e27d3de01f17f3b5066e/graphique_theatres_avant_LST.pdf?raw=true)
+
+[![Ouvrir le PDF](https://img.shields.io/badge/Ouvrir%20le%20PDF-Graphique%20Théâtres%202025-blue?style=for-the-badge)](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/cf37d58a9eff93de1658e27d3de01f17f3b5066e/graphique_theatres_avant_LST.pdf?raw=true) <br>
+
+La heatmap suivante montre l'écart de température à la moyenne anuelle des 10 % des théâtres les plus chauds et les plus frais.
+
+<br>
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/3a38f24a8cca053ebb5329fbf2bd83ec8084f082/03.6_lieux_dhier/heatmap_theatres_frais_chauds.png?raw=true" width="100%"/>
+</div> <br>
+
+Le même graphique mais pour tous les théâtres existe dans ce dossier : 
+📂[`03.6_lieux_dhier`](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/tree/main/03.6_lieux_dhier)
+
 
 
 ---
