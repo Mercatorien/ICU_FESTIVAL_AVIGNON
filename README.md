@@ -75,16 +75,16 @@ Choix de deux sites d'étude pour appliquer la méthode : <br>
 
 J'utilise l'algorithme GRASS r.sunmask.datetime et le LiDAR pour calculer les ombres portées du 10 juillet de 6h à 19h pour les deux sites d'étude.
 
-<table width="100%">
-  <tr>
-    <td align="center" width="50%">
-      <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_CHARTREUSE.gif?raw=true" width="90%"/>
-    </td>
-    <td align="center" width="50%">
-      <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_MISTRAL.gif?raw=true" width="90%"/>
-    </td>
-  </tr>
-</table>
+<br>
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_CHARTREUSE.gif?raw=true" width="70%"/>
+</div> <br>
+
+<br>
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_MISTRAL.gif?raw=true" width="70%"/>
+</div> <br>
+<br>
 
 
 → Gymnase du lycée Mistral : 8h → 16h <br>
