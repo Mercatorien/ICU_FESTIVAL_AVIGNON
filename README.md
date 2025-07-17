@@ -39,11 +39,12 @@ Résultat :
 <ul>
   <li>À moins de 15 minutes à pied de la place Pie :</li>
   <ul>
-    <li>45 % des théâtres</li>
-    <li>66 % des personnes accueillies</li>
+    <li><b> 45 % des théâtres </li>
+    <li> 66 % des personnes accueillies </li>
   </ul>
-  <li>→ Concentration des théâtres en Intra-muros</li>
 </ul>
+→ Concentration des théâtres en Intra-muros</b>
+
 
 
 ---
@@ -70,12 +71,24 @@ Choix de deux sites d'étude pour appliquer la méthode : <br>
 
 
 
-### 3.1 🌳 Ombrage
+### 3.1 ☀️ Ombrage
+
+J'utilise l'algorithme GRASS r.sunmask.datetime et le LiDAR pour calculer les ombres portées du 10 juillet de 6h à 19h pour les deux sites d'étude.
+
+<table width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_CHARTREUSE.gif?raw=true" width="90%"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_MISTRAL.gif?raw=true" width="90%"/>
+    </td>
+  </tr>
+</table>
 
 
-
-Gymnase du lycée Mistral : 8h → 15h
-Chartreuse de Villeneuve lez Avignon : 11h → 15h (plus arbres ombragés toute la journée)
+→ Gymnase du lycée Mistral : 8h → 16h <br>
+→ Chartreuse de Villeneuve lez Avignon : 11h → 15h (plus arbres ombragés toute la journée)<br>
 
 
 ---
@@ -84,11 +97,31 @@ Chartreuse de Villeneuve lez Avignon : 11h → 15h (plus arbres ombragés toute 
 
 Le **Normalized Difference Vegetation Index (NDVI)** a été utilisé pour identifier les zones végétalisées.
 
-- Calculé à partir des images Sentinel-2
-- Corrélé à la température de surface
-- Permet d’identifier les **îlots de fraîcheur végétale**
+<ul>
+  <li>Calcul du NDVI sur une zone de 200 mètres autour des théâtres.</li>  
+</ul> <br>
 
-Les zones à fort NDVI sont valorisées pour leur potentiel de régulation thermique.
+
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/ba8e0d75f181f22e1d201d003002c287d93fb85e/03.2_vegetation/NDVI_MOYEN.jpg?raw=true" width="70%"/>
+</div> <br> <br>
+
+🚨 <i>Spoiler alert</i> : La présence de végétation réduit la température. 🚨 <br>
+
+<ul>
+  <li>Régression linéaire et corrélation du NDVI et de la thermographie de surface :</li>  
+</ul> <br>
+
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/ba8e0d75f181f22e1d201d003002c287d93fb85e/03.2_vegetation/correlation_ndvi_t.jpg?raw=true" width="70%"/>
+</div> <br>
+
+<ul>
+  <li>42 % de la variance de la température est expliquée par le degré de végétalisation.</li>
+  <li>Quand le NDVI augmente de 0.1, la température diminue de 1°C.
+</li>
+</ul> <br>
+
 
 ---
 
@@ -96,19 +129,106 @@ Les zones à fort NDVI sont valorisées pour leur potentiel de régulation therm
 
 ### 5.1 Télédétection
 
-La température de surface a été extraite à partir des images **Landsat 8**.
+Quels facteurs explicatifs à l'apparition d'îlot de chaleur urbain (ICU) ? <br>
 
-- Images sélectionnées en période de canicule (juillet)
-- Extraction de la température de brillance et correction atmosphérique
-- Résultat : **carte thermique haute résolution** de la ville d’Avignon
+<table>
+  <thead>
+    <tr>
+      <th>Catégorie</th>
+      <th>Facteurs principaux</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Structure urbaine</td>
+      <td>
+        <ul>
+          <li>Matériaux minéraux (bitume, béton)</li>
+          <li>Faible albédo</li>
+          <li>Morphologie des rues (canyon urbain)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Absence de végétation</td>
+      <td>
+        <ul>
+          <li>Sols imperméables</li>
+          <li>Peu d'espaces verts</li>
+          <li>Évapotranspiration réduite</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Activités humaines</td>
+      <td>
+        <ul>
+          <li>Trafic routier et industries</li>
+          <li>Chauffage et climatisation</li>
+          <li>Pollution atmosphérique</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Facteurs climatiques</td>
+      <td>
+        <ul>
+          <li>Vents faibles</li>
+          <li>Faible humidité</li>
+          <li>Ciel dégagé la nuit</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Facteurs temporels</td>
+      <td>
+        <ul>
+          <li>Cycle jour/nuit</li>
+          <li>Croissance urbaine rapide</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br> <br>
+
+
+La température de surface a été extraite à partir des images **Landsat 8 & 9**.
+
+- Images sélectionnées en juillet (période du Festival)
+
+<br>
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/2e115b132a13b32595eb529df5fb6e6f749c7a1d/03.3_thermographie_mesuree/lst.jpg?raw=true" width="70%"/>
+</div> <br>
+
+
+En calculant des thermographies de surface en série temporelle, j'obtiens pour chaque théâtre du IN, l'évolution de la température entre 2013 et 2025. 
+
+[![Ouvrir le PDF](https://img.shields.io/badge/Ouvrir%20le%20PDF-Graphique%20Théâtres%202025-blue?style=for-the-badge)](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/a29c43e40468eb44383f22aab254262bff794f1c/03.3_thermographie_mesuree/graphique_theatres_2025.pdf?raw=true)
+<br>
+→ Permet de détecter les théâtres les plus chauds et les plus frais :
+
+<img width="2000" height="477" alt="image" src="https://github.com/user-attachments/assets/30ce9e33-6e74-4a87-beab-0255eb0731fd" />
+
 
 ### 5.2 Modélisation
 
-En complément, une **modélisation thermique** a été réalisée à l’aide d’un modèle énergétique urbain simplifié.
+En complément, une **modélisation thermique** a été réalisée à l’aide d’un modèle énergétique urbain.
 
-- Intègre les matériaux urbains, les usages, la végétation
-- Permet de prédire la température en fonction de différents scénarios (densification, verdissement)
-- Utilisé pour **simuler l’impact thermique** de futures installations culturelles
+Données d'entrée :
+1. Occupation du sol
+2. Fichier météo
+3. Arbres (+ hauteur)
+4. Bâtiments (+ hauteur)
+5. Ombres portées
+
+Avantages :
+- Faible résolution spatiale
+- Modélisation heure par heure
+- Tester différentes configurations spatiales (notamment avant/après aménagement)
+
 
 ---
 
