@@ -77,12 +77,12 @@ J'utilise l'algorithme GRASS r.sunmask.datetime et le LiDAR pour calculer les om
 
 <br>
 <div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_CHARTREUSE.gif?raw=true" width="70%"/>
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_CHARTREUSE.gif?raw=true" width="60%"/>
 </div> <br>
 
 <br>
 <div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_MISTRAL.gif?raw=true" width="70%"/>
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_MISTRAL.gif?raw=true" width="60%"/>
 </div> <br>
 <br>
 
@@ -230,30 +230,58 @@ Avantages :
 - Tester différentes configurations spatiales (notamment avant/après aménagement)
 
 
+<br>
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/597329f2e4497a2650d760e7fd61a16670bb02b9/03.4_thermographie_modelisee/GIF_CHARTREUSE.gif?raw=true" width="70%"/>
+</div> <br>
+
+<br>
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/597329f2e4497a2650d760e7fd61a16670bb02b9/03.4_thermographie_modelisee/GIF_MISTRAL.gif?raw=true" width="70%"/>
+</div> <br>
+
+<br>
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/597329f2e4497a2650d760e7fd61a16670bb02b9/03.4_thermographie_modelisee/graphique_temperature.png?raw=true" width="70%"/>
+</div> <br>
+
+<ins>Que retenir ?</ins>
+
+1. Les températures changent plus ce que l’on pense selon :
+	- L’heure
+	- La typologie/morphologie urbaine
+2. Écarts de température importants selon les lieux
+	- 10 °C à 15h entre les deux théâtres (!)
+3. La température la plus basse pour mistral, c’est quasiment la température la plus chaude pour le lycée mistral
+
+
 ---
 
 ## 6. 🏠 Étude du Diagnostic de Performance Énergétique (DPE)
 
-L’analyse du **parc bâti** a été conduite via les diagnostics de performance énergétique :
+Une des hypothèses de recherche est que les théâtres les moins isolés ont un confort thermique réduit. Pour mesurer ça, nous étudions le lien statistique entre la classe de **diagnostic de performance énergétique** et l'année de construction des bâtiments. Si le lien est avéré, nous pouvons extrapôler, et prédire par modélisation statistique la classe DPE pour les théâtres qui ne sont pas encore diagnostiqués.
 
-- Extraction des données DPE via Etalab
-- Croisement avec les données cadastrales
-- Classification des bâtiments selon leur performance
-- Identification des bâtiments potentiellement inconfortables en période estivale
+<br>
+<div align="center">
+  <img src="https://mercatorien.github.io/DPE_FESTIVAL_AVIGNON/DPE_files/figure-html/unnamed-chunk-6-1.png?raw=true" width="70%"/>
+</div> <br>
 
-Objectif : **éviter de programmer des représentations dans des lieux trop énergivores ou mal isolés.**
+
+<div align="center">
+  <a href="https://mercatorien.github.io/DPE_FESTIVAL_AVIGNON/" target="_blank">
+    <img src="https://img.shields.io/badge/🔎%20Voir%20l'analyse%20statistique%20du%20DPE%20en%20ligne-blue?style=for-the-badge" alt="DPE Festival Avignon"/>
+  </a>
+</div>
+
+
 
 ---
 
 ## 7. 🏛️ Les lieux d’hier les plus susceptibles d’être réutilisables
 
-Un inventaire des lieux utilisés historiquement par le Festival a été croisé avec :
+À partir de la base de donnée créée par Kevin Bernard qui recense tous les théâtres du IN depuis 1947 jusqu'à nos jours, je calcule l'évolution de la température sur les 162 théâtres les plus proches d'Avignon.
+[![Ouvrir le PDF](https://img.shields.io/badge/Ouvrir%20le%20PDF-Graphique%20Théâtres%202025-blue?style=for-the-badge)](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/cf37d58a9eff93de1658e27d3de01f17f3b5066e/graphique_theatres_avant_LST.pdf?raw=true)
 
-- Leur performance thermique actuelle
-- Leur accessibilité
-- Leur confort d’usage (ombrage, végétation, température)
-
-Une **typologie des lieux réutilisables** a été établie pour guider les choix futurs des organisateurs, en conciliant **mémoire des lieux** et **enjeux climatiques contemporains**.
 
 ---
 
