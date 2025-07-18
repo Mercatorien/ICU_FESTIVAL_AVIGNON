@@ -300,5 +300,27 @@ Le même graphique mais pour tous les théâtres existe dans ce dossier :
 
 ---
 
-## 📁 Arborescence simplifiée du dépôt
+## 📁 Arborescence du dépôt
+
+ICU_FESTIVAL_AVIGNON/<br>
+├── 01_bdd/                        # Base de données utilisée pour l’analyse<br>
+│   └── BDD.png<br>
+├── 02_accessibilite/             # Analyse de l'accessibilité des lieux<br>
+│   └── ACCESSIBILITE.png<br>
+├── 03.1_ombrage/                 # Étude de l’ombrage (GIFs)<br>
+│   ├── GIF_MISTRAL.gif<br>
+│   └── GIF_CHARTREUSE.gif<br>
+├── 03.2_ndvi/                    # Indice de végétation NDVI<br>
+│   └── NDVI.png<br>
+├── 03.3_thermographie_mesuree/   # Température de surface mesurée<br>
+│   └── graphique_theatres_2025.pdf<br>
+├── 03.4_thermographie_modelee/   # Température de surface modélisée<br>
+│   └── modelee_temp.png<br>
+├── 03.5_dpe/                     # Analyse du DPE des bâtiments<br>
+│   └── lien vers le site : https://mercatorien.github.io/DPE_FESTIVAL_AVIGNON/<br>
+├── 03.6_lieux_dhier/             # Étude sur la réutilisation des lieux historiques<br>
+│   └── fichiers d'analyse<br>
+├── PRESENTATION_MASSOT.pdf       # Présentation complète du projet<br>
+└── README.md                     # Présentation générale du dépôt<br><br>
+
 
