@@ -1,6 +1,6 @@
 # Étude de la chaleur urbaine pendant le Festival IN d'Avignon <br> Objectif : Trouver les théâtres de demain
 
-Ce projet a été réalisé dans le cadre d’un **stage de recherche** au sein de [**InterMEDIUS**](https://intermedius.univ-avignon.fr/), École Universitaire de Recherche soutenue par **Avignon Université**, en collaboration avec le laboratoire [**UMR 7300 ESPACE**](https://espace.cnrs.fr/).
+Ce projet a été réalisé dans le cadre d’un **stage de recherche** au sein de [**InterMEDIUS**](https://intermedius.univ-avignon.fr/), en collaboration avec le laboratoire [**UMR 7300 ESPACE**](https://espace.cnrs.fr/).
 
 L’objectif principal est de **comprendre la dynamique de la chaleur urbaine** lors du **Festival d’Avignon IN**, et d’identifier les **"lieux de demain"**, c’est-à-dire les futurs espaces potentiels pour accueillir des représentations théâtrales en tenant compte des contraintes climatiques (température, ombrage, végétation, accessibilité…).
 
