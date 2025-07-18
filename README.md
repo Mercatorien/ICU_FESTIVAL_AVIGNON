@@ -1,12 +1,16 @@
 # Étude de la chaleur urbaine pendant le Festival IN d'Avignon <br> Objectif : Trouver les théâtres de demain
 
-Ce projet a été réalisé dans le cadre d’un **stage de recherche** au sein de **InterMEDIUS**, École Universitaire de Recherche soutenue par **Avignon Université**, en collaboration avec le laboratoire **UMR 7300 ESPACE**.
+Ce projet a été réalisé dans le cadre d’un **stage de recherche** au sein de [**InterMEDIUS**](https://intermedius.univ-avignon.fr/), École Universitaire de Recherche soutenue par **Avignon Université**, en collaboration avec le laboratoire [**UMR 7300 ESPACE**](https://espace.cnrs.fr/).
 
-L’objectif principal est de **comprendre la dynamique de la chaleur urbaine** à Avignon en période estivale, en particulier lors du **Festival d’Avignon IN**, et d’identifier les **"lieux de demain"**, c’est-à-dire les futurs espaces potentiels pour accueillir des représentations théâtrales en tenant compte des contraintes climatiques (température, ombrage, végétation, accessibilité…).
+L’objectif principal est de **comprendre la dynamique de la chaleur urbaine** lors du **Festival d’Avignon IN**, et d’identifier les **"lieux de demain"**, c’est-à-dire les futurs espaces potentiels pour accueillir des représentations théâtrales en tenant compte des contraintes climatiques (température, ombrage, végétation, accessibilité…).
 
-Ce dépôt regroupe les analyses, cartes, données et scripts utilisés dans le cadre de cette recherche.
+Ce dépôt regroupe les analyses statistiques, modélisations, cartes, données et scripts utilisés dans le cadre de cette recherche.
 
-> Licence : [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+Travail réalisé sous la direction de Sophie Gaillard et Didier Josselin.
+
+## 📄 Licence
+
+Ce projet est distribué sous licence [![Licence: CC BY-SA 4.0](https://img.shields.io/badge/Licence-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
 
@@ -49,7 +53,7 @@ Résultat :
 
 ---
 
-## 3. Analyse multi-critères
+## 3. Analyse multicritères
 
 Dans cette analyse multicritères, on travaille sur :
 <ul>
@@ -65,10 +69,6 @@ Choix de deux sites d'étude pour appliquer la méthode : <br>
   <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/403c1899766cedc2a9d14d9ae8ad353a75bbf4cb/03_multicritere/sites_etude.jpg?raw=true" width="70%"/>
 </div> <br><br>
 
-<div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/ee8c88880a21f63aa8e3866ca63131cb965a88d1/03_multicritere/typologies_sites.png?raw=true" width="40%"/>
-</div> <br>
-
 
 
 ### 3.1 ☀️ Ombrage
@@ -77,14 +77,9 @@ J'utilise l'algorithme GRASS r.sunmask.datetime et le LiDAR pour calculer les om
 
 <br>
 <div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_CHARTREUSE.gif?raw=true" width="60%"/>
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/1f6863f2cc27448ba5ca49db5d0af3b538477540/03.1_ombrage/GIFS_OMBRAGE_COMBINE.gif?raw=true" width="100%"/>
 </div> <br>
 
-<br>
-<div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/f9728db546c68b86a8267d9c4e969b61c335f26a/03.1_ombrage/GIF_MISTRAL.gif?raw=true" width="60%"/>
-</div> <br>
-<br>
 
 
 → Gymnase du lycée Mistral : 8h → 16h <br>
@@ -234,18 +229,9 @@ Avantages :
 
 <br>
 <div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/597329f2e4497a2650d760e7fd61a16670bb02b9/03.4_thermographie_modelisee/GIF_CHARTREUSE.gif?raw=true" width="70%"/>
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/eff55d04554e156d4df50c1f424dfc294d024a2e/03.4_thermographie_modelisee/GIFS_ICE_TOOL_COMBINE.gif?raw=true" width="100%"/>
 </div> <br>
 
-<br>
-<div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/597329f2e4497a2650d760e7fd61a16670bb02b9/03.4_thermographie_modelisee/GIF_MISTRAL.gif?raw=true" width="70%"/>
-</div> <br>
-
-<br>
-<div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/597329f2e4497a2650d760e7fd61a16670bb02b9/03.4_thermographie_modelisee/graphique_temperature.png?raw=true" width="70%"/>
-</div> <br>
 
 <ins>Que retenir ?</ins>
 
@@ -265,7 +251,7 @@ Une des hypothèses de recherche est que les théâtres les moins isolés ont un
 
 <br>
 <div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/0b744f092968c6516a3da4b0ab7c5a36e2354300/03.5_dpe/boxplot_dpe.png?raw=true" width="70%"/>
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/57b4fd8c76cfd407175e1bf4b6696fde93c6e12b/04_dpe/boxplot_dpe.png?raw=true" width="70%"/>
 </div> <br>
 
 
@@ -273,9 +259,14 @@ Une des hypothèses de recherche est que les théâtres les moins isolés ont un
   <a href="https://mercatorien.github.io/DPE_FESTIVAL_AVIGNON/" target="_blank">
     <img src="https://img.shields.io/badge/🔎%20Voir%20l'analyse%20statistique%20du%20DPE%20en%20ligne-blue?style=for-the-badge" alt="DPE Festival Avignon"/>
   </a>
-</div>
+</div> <br>
 
+Les conditions de réalisation de l'ANOVA ne sont pas réunies :
+Normalité (Shapiro-Wilk) : Les distributions par classe ne respectent pas la normalité (p-values très faibles, < 0.001).
 
+Homogénéité des variances (Levene) : Les variances sont significativement différentes entre classes (p-value < 0.001).
+
+En réalisant le test non paramétrique de Kruskal-Wallis qui permet de comparer les médianes de plusieurs groupes sans supposer la normalité des données, nous obtenons une p-value significative (< 0.001) qui indique qu'il existe au moins une différence significative entre les groupes.
 
 ---
 
@@ -283,17 +274,17 @@ Une des hypothèses de recherche est que les théâtres les moins isolés ont un
 
 À partir de la base de donnée créée par Kevin Bernard qui recense tous les théâtres du IN depuis 1947 jusqu'à nos jours, je calcule l'évolution de la température sur les 162 théâtres les plus proches d'Avignon.
 
-[![Ouvrir le PDF](https://img.shields.io/badge/Ouvrir%20le%20PDF-Graphique%20Théâtres%202025-blue?style=for-the-badge)](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/cf37d58a9eff93de1658e27d3de01f17f3b5066e/graphique_theatres_avant_LST.pdf?raw=true) <br>
+[![Ouvrir le PDF](https://img.shields.io/badge/Ouvrir%20le%20PDF-Graphique%20Théâtres%202025-blue?style=for-the-badge)](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/6d60b07fe1fb728297283e2d235178cf6a176638/05_lieux_dhier/graphique_theatres_avant_LST.pdf?raw=true) <br>
 
 La heatmap suivante montre l'écart de température à la moyenne anuelle des 10 % des théâtres les plus chauds et les plus frais.
 
 <br>
 <div align="center">
-  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/3a38f24a8cca053ebb5329fbf2bd83ec8084f082/03.6_lieux_dhier/heatmap_theatres_frais_chauds.png?raw=true" width="100%"/>
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/6d60b07fe1fb728297283e2d235178cf6a176638/05_lieux_dhier/heatmap_theatres_frais_chauds.png?raw=true" width="100%"/>
 </div> <br>
 
 Le même graphique mais pour tous les théâtres existe dans ce dossier : 
-📂[`03.6_lieux_dhier`](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/tree/main/03.6_lieux_dhier)
+📂[`03.6_lieux_dhier`](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/tree/main/05_lieux_dhier)
 
 
 
