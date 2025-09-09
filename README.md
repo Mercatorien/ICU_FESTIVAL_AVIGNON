@@ -210,6 +210,8 @@ En calculant des thermographies de surface en série temporelle, j'obtiens pour 
 <img width="2000" height="477" alt="image" src="https://github.com/user-attachments/assets/30ce9e33-6e74-4a87-beab-0255eb0731fd" />
 
 
+
+
 ## 3.4 Température de surface modélisée
 
 En complément, une **modélisation thermique** a été réalisée à l’aide d’un modèle énergétique urbain.
@@ -297,6 +299,11 @@ Le même graphique mais pour tous les théâtres existe dans ce dossier :
   </a>
 </div> <br>
 
+## Carte interactive : <br>
+
+**Parcourez la carte interactive de la chaleur urbaine en séries temporelles et de l’accessibilité des théâtres du Festival IN.**
+
+👉 [Accéder à la carte](https://mercatorien.github.io/ICU_FESTIVAL_AVIGNON/)
 
 ---
 
