@@ -47,7 +47,9 @@ Résultat :
     <li> 66 % des personnes accueillies </li>
   </ul>
 </ul>
-→ Concentration des théâtres en Intra-muros</b>
+		
+→ Concentration des théâtres en Intra-muros
+→ Intérêts à concentrer les efforts d'aménagements dans cette zone-là</b>
 
 
 
@@ -59,7 +61,7 @@ Dans cette analyse multicritères, on travaille sur :
 <ul>
 <li> L'ombrage</li>
 <li> La végétalisation</li>
-<li> La Température de surface mesurée par télédétection</li>
+<li> La température de surface mesurée par télédétection</li>
 <li> Température de surface modélisée</li>
 </ul> <br>
 
@@ -81,7 +83,7 @@ J'utilise l'algorithme GRASS r.sunmask.datetime et le LiDAR pour calculer les om
 </div> <br>
 
 
-
+Horaires des ombrages : 
 → Gymnase du lycée Mistral : 8h → 16h <br>
 → Chartreuse de Villeneuve lez Avignon : 11h → 15h (plus arbres ombragés toute la journée)<br>
 
@@ -234,6 +236,11 @@ Avantages :
   <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/eff55d04554e156d4df50c1f424dfc294d024a2e/03.4_thermographie_modelisee/GIFS_ICE_TOOL_COMBINE.gif?raw=true" width="100%"/>
 </div> <br>
 
+<br>
+<div align="center">
+  <img src="https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/93c4f7933fc8fddbbbd106e84456cfa8720b7e14/03.4_thermographie_modelisee/graphique_temperature.png" width="70%"/>
+</div> <br>
+
 
 <ins>Que retenir ?</ins>
 
@@ -249,7 +256,7 @@ Avantages :
 
 ## 4. 🏠 Étude du Diagnostic de Performance Énergétique (DPE)
 
-Une des hypothèses de recherche est que les théâtres les moins isolés ont un confort thermique réduit. Pour mesurer ça, nous étudions le lien statistique entre la classe de **diagnostic de performance énergétique** et l'année de construction des bâtiments. Si le lien est avéré, nous pouvons extrapôler, et prédire par modélisation statistique la classe DPE pour les théâtres qui ne sont pas encore diagnostiqués.
+Une des hypothèses de recherche est que les théâtres les moins isolés ont un confort thermique réduit. Pour mesurer ça, nous étudions le lien statistique entre la classe de **diagnostic de performance énergétique** et **l'année de construction des bâtiments**. Si le lien est avéré, nous pouvons extrapôler, et prédire par modélisation statistique la classe DPE pour les théâtres qui ne sont pas encore diagnostiqués.
 
 <br>
 <div align="center">
