@@ -285,7 +285,7 @@ En réalisant le test non paramétrique de Kruskal-Wallis qui permet de comparer
 
 [![Ouvrir le PDF](https://img.shields.io/badge/Ouvrir%20le%20PDF-Graphique%20Théâtres%202025-blue?style=for-the-badge)](https://github.com/Mercatorien/ICU_FESTIVAL_AVIGNON/blob/6d60b07fe1fb728297283e2d235178cf6a176638/05_lieux_dhier/graphique_theatres_avant_LST.pdf?raw=true) <br>
 
-La heatmap suivante montre l'écart de température à la moyenne anuelle des 10 % des théâtres les plus chauds et les plus frais.
+La heatmap suivante montre l'écart de température à la moyenne annuelle des 10 % des théâtres les plus chauds et les plus frais.
 
 <br>
 <div align="center">
